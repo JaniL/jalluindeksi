@@ -21,6 +21,17 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
         <script>
+
+          var JALLU = "http://i.imgur.com/TrEG1s0.jpg";
+
+          function jalluyllatys() {
+            var jallu = document.createElement("img");
+            jallu.src = JALLU;
+            document.body.appendChild(jallu);
+          }
+
+          jalluyllatys();
+
           jQuery.get('/price', function(data) {
             $(".hinta").html(data + " euroa");
           })
@@ -29,7 +40,7 @@
         <style>
           body {
             font-family: 'Lato', sans-serif;
-            font-size:5em;
+            font-size:5.9vw;
             text-align: center;
           }
         </style>
