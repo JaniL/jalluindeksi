@@ -18,11 +18,13 @@
         <h1>Päivän hinta on</h1>
         <p class="hinta">Ladataan...</p>
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
 
         <script>
 
-          var JALLU = "http://i.imgur.com/TrEG1s0.jpg";
+          // var JALLU = "http://i.imgur.com/TrEG1s0.jpg";
+          var JALLU = "http://i.imgur.com/9weFxFb.png";
 
           function jalluyllatys() {
             var jallu = document.createElement("img");
@@ -30,12 +32,20 @@
             jallu.width = 50;
             jallu.style.position = "absolute";
             jallu.style.top = "-10px";
-            jallu.style.left = (Math.floor(Math.random() * ((0.9*screen.width) - 0 + 1))) + "px";
+            // jallu.style.z-index = '-22';
+            // jallu.style.left = (Math.floor(Math.random() * ((0.9*screen.width) - 0 + 1))) + "px";
             document.body.appendChild(jallu);
+            animoi("img");
+          }
+
+          function animoi(arg) {
+            console.log("go");
+            $(arg).transition({ rotate: '+=2deg', x: '+=10px' }, function() { animoi(arg); });
           }
 
           jalluyllatys();
-          setInterval(jalluyllatys,1000);
+          // animoi();
+          // setInterval(animoi,1000);
 
           jQuery.get('/price', function(data) {
             $(".hinta").html(data + " euroa");
