@@ -39,7 +39,11 @@
           }
 
           function animoi(arg) {
-            $(arg).transition({ rotate: '+=5deg', x: '+=2px', y: '+=5px', opacity: '-=0.05' }, function() {
+            $(arg).transition({ rotate: '+=5deg',
+            x: '+=2px',
+            y: '+=5px',
+            opacity: '-=0.05',
+            scale: '+=0.05'}, function() {
               if (arg.style.opacity <= 0.0) {
                 console.log("poista");
                 arg.remove();
