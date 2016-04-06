@@ -54,6 +54,7 @@
           }
 
           function start() {
+            if (document.hidden) return;
             for (var i = 0; i < 3; i++) {
               jalluyllatys();
             }
