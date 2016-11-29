@@ -29,12 +29,8 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   foreman
   heroku
   sinatra
-
-BUNDLED WITH
-   1.13.6
