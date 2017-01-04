@@ -16,7 +16,7 @@
 
         <!-- Add your site or application content here -->
         <h1>Päivän hinta on</h1>
-        <p class="hinta">Ladataan...</p>
+        <p class="hinta"></p>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
         <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
@@ -60,6 +60,8 @@
             }
           }
 
+          $(".hinta").html("Ladataan...");
+
           // animoi();
           start();
           setInterval(start,1000);
@@ -68,6 +70,9 @@
             $(".hinta").html(data + " euroa");
           })
         </script>
+        <noscript>
+          tarkastettavissa Alkon sivuilta senkin nykyaikaa vihaava rusina.
+        </noscript>
 
         <style>
           body {
