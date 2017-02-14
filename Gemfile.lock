@@ -33,4 +33,8 @@ PLATFORMS
 DEPENDENCIES
   foreman
   heroku
+  rest-client
   sinatra
+
+BUNDLED WITH
+   1.11.2
